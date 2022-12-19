@@ -1,0 +1,12 @@
+.radio-data {
+  margin-top: 12px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+}
+
+.radio-item + .radio-item {
+  margin-left: 8px;
+}
