@@ -208,15 +208,7 @@ export default{
 
         //Lấy dữ liệu từ Serve
         if(this.valueIsEmpty(this.employeeId)){
-            axios.get(`https://cukcuk.manhnv.net/api/v1/employees/${this.employeeId}`)
-            .then((res)=> {
-                this.newEmployee = res.data;
-            })
-            .catch((res)=>{
-                console.log(res)
-            })
-        }
-        else{
+
             //Lấy mã nhân viên mới
             axios.get("https://cukcuk.manhnv.net/api/v1/Employees/NewEmployeeCode")
             .then(res=>{
@@ -229,6 +221,15 @@ export default{
                 })
             })
             .catch(res=>{
+                console.log(res)
+            })
+        }
+        else{
+            axios.get(`https://cukcuk.manhnv.net/api/v1/employees/${this.employeeId}`)
+            .then((res)=> {
+                this.newEmployee = res.data;
+            })
+            .catch((res)=>{
                 console.log(res)
             })
         }

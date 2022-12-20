@@ -46,7 +46,7 @@
                     </div>
                 </div>
     </div>
-    <EmployeeDetail v-if="showDetail" :employee="employeeSelected" :employeeId="employeeIdSelected" @onClose="onCloseDetail"></EmployeeDetail>
+    <EmployeeDetail v-if="showDetail" :employeeId="employeeIdSelected" @onClose="onCloseDetail"></EmployeeDetail>
 </template>
 
 
@@ -71,9 +71,9 @@
             try{
                //Hiển thị Dialog
                this.showDetail = true;
-               this.employeeSelected = item;
+               //this.employeeSelected = item;
                this.employeeIdSelected = item.EmployeeId;
-               console.log("Item",this.employeeSelected);
+               //console.log("Item", this.employeeIdSelected);
             }
             catch(e){
                 console.log(e);
@@ -173,8 +173,8 @@
        return{
         employees:[],
         showDetail : false,
-        employeeSelected: null,
-        employeeIdSelected: null
+        // employeeSelected: {},
+        employeeIdSelected: {}
        }
     }
    }
