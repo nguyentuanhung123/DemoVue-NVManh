@@ -183,7 +183,7 @@
 import axios from 'axios';
 export default{
     name:"EmployeeDetail",
-    props:["employee","employeeId"],
+    props:["employeeId"],
     computed:{
         isAdd: function(){
             if(this.valueIsEmpty(this.employeeId)){
